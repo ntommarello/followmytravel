@@ -1,0 +1,96 @@
+ <% content_for(:head) do %>
+
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+  <script>
+    var autocomplete;
+    function initialize2() {
+      autocomplete = new google.maps.places.Autocomplete(
+      /** @type {HTMLInputElement} */(document.getElementById('autocomplete-name')),
+      { types: ['establishment'] });
+      google.maps.event.addListener(autocomplete, 'place_changed', function() {
+     });
+   }
+  </script>
+
+  <script type="text/javascript">
+   function initialize() {
+
+       var options = {
+        types: ['(cities)']
+       };
+
+      var input = document.getElementById('city1');
+      var input2 = document.getElementById('city2');
+      var input3 = document.getElementById('city3');
+      var autocomplete = new google.maps.places.Autocomplete(input, options);
+      var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
+      var autocomplete3 = new google.maps.places.Autocomplete(input3, options);
+   }
+   google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+<%end%>
+
+
+ <div class="top_navigation">
+    <a href="/">
+      <div class="logo"></div>
+    </a>
+
+    <div class="user">
+      <div class="name">Наталья</div>
+      <img class="avatar" src="/assets/natalya.jpg">
+    </div>
+
+  </div>
+
+
+  <div class="flash-bar">
+    <h1>Ура! Ты с нами!</h1>
+    <h2>Ты любишь путешествовать, поэтому мы <span style="display:inline-block">выбрали <span class="red-highlight">тебя!</span></span></h2>
+  </div>
+
+  <div class="flexContent">
+    <div class="form-box">
+      <h2>Назови три <span class="red-highlight">любимых</span> города</h2>
+
+      <div class="cities">
+        <input id="city1" type="text" placeholder="город #1">
+        <input id="city2" type="text" placeholder="город #2">
+        <input id="city3" type="text" placeholder="город #3">
+      </div>
+
+      <h2>Расскажи про одно из <span class="red-highlight">любимых</span> мест в мире, которое ты всегда советуешь друзьям</h2>
+
+      <input id="autocomplete-name" class="autocomplete-name" type="text" placeholder="Название"><br>
+
+      <button class="submit">ДАЛЬШЕ</button>
+
+    </div>
+  </div>
+
+
+<script>
+  $(document).ready(function() {  
+
+    $('.preload').load(function() {  
+        $(".background_photo").css("opacity",1);
+   });  
+    setTimeout('$(".background_photo").css("opacity",1)',5000);
+  });
+
+  $(".learn").click(function() {
+    scrollToClass("slide1")
+  });
+
+
+  function scrollToId(id){
+    $('html,body').animate({scrollTop: $("#"+id).offset().top - 10},500);
+  }
+
+  function scrollToClass(className){
+    $('html,body').animate({scrollTop: $("."+className).offset().top - 10},500);
+  }
+
+</script>

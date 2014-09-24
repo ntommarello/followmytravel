@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1, minimal-ui">
+  <link rel="shortcut icon" type="image/png"  href="/assets/plane.png"/>
+  <title>Follow My Travel | Самый простой способ обмениваться впечатлениями о путешествиях</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= yield :head %>
+  <%= csrf_meta_tags %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body class="followmytravel welcome">
+
+  <%= yield %>
+
+</body>
+</html>

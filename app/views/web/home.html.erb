@@ -1,0 +1,194 @@
+ <header>
+      <div class="topNav">
+        <div class="logo"></div>
+        <div class="links">
+            <a href="#">Login</a> <a href="#">Signup</a>
+        </div>
+
+      </div>
+
+      <div class="background_photo" ></div>
+
+      <div class="bottom">
+        <h1>Самый простой способ обмениваться впечатлениями <span style="display:inline-block">о путешествиях</span></h1>
+        <a href="/auth/facebook" style="color:#fff;"  class="facebook-login" style="margin-top:2px" data-height="400" data-width="600">
+              <span class="logo">
+                  <i class="fa fa-facebook"></i>
+            </span>
+             LВойти через FACEBOOK
+        </a><br>
+        <div style="clear:both"></div>
+      <div class="learn fa fa-chevron-circle-down"></div>
+      </div>
+
+  </header>
+
+
+  <div class="slide1 section">
+
+    <h2>Любое путешествие начинается с трех вопросов</h2>
+
+    <div class="centerCircles">
+
+      <div class="col">
+        <div class="circle">
+          <span class="fa fa-home"></span>
+        </div>
+        <h3 style="text-transform:lowercase;">Где<br>ОСТАНОВИТЬСЯ?</h3>
+      </div>
+
+      <div class="col">
+        <div class="circle">
+          <span class="fa fa-cutlery"></span>
+        </div>
+        <h3>Где<br>ПОесть?</h3>
+      </div>
+
+      <div class="col">
+        <div class="circle">
+          <span class="fa fa-bank"></span>
+        </div>
+        <h3>Где<br>делать?</h3>
+      </div>
+
+    </div>
+
+    <div style="clear:both"></div>
+
+    <div class="divider"></div>
+
+    <div class="more_info">
+      <div class="left_col">
+        <h3>ДО<br>ПУТЕШЕСТВИЯ<br></h3>
+        <p>Мы идем за советом к друзьям и к тем, чьим вкусам доверяем</p>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="right_col">
+        <h3>ПОСЛЕ<br>ПУТЕШЕСТВИЯ<br></h3>
+        <p>Мы советуем то, что нам понравилось</p>
+      </div>
+    </div>
+
+    <div style="clear:both"></div>
+
+
+  </div>
+
+
+  <div class="red">
+  <div class="section red_section">
+
+    <h2>ЛУЧШИЕ МЕСТАВ ЛЮБОМ ГОРОДЕ МИРА</h2>
+
+    <div class="centerCircles">
+
+      <div class="col">
+        <div class="circle">
+          <span class="fa fa-thumb-tack"></span>
+        </div>
+        <h3>ХРАНИ</h3>
+      </div>
+
+      <div class="col">
+        <div class="circle">
+          <span class="fa fa-group"></span>
+        </div>
+        <h3>ДЕЛИСЬ</h3>
+      </div>
+
+      <div class="col">
+        <div class="circle">
+          <span class="fa fa-search"></span>
+        </div>
+        <h3>НАХОДИ</h3>
+      </div>
+
+    </div>
+
+    <div style="clear:both"></div>
+
+    <div class="divider"></div>
+
+
+    <a href="/auth/facebook" style="color:#fff"  class="facebook-login" style="margin-top:2px" data-height="400" data-width="600">
+          <span class="logo">
+              <i class="fa fa-facebook"></i>
+        </span>
+         LВойти через FACEBOOK
+    </a>
+
+    
+    <div class="fb-text">Мы используем регистрацию через Facebook, чтобы не пришлось придумывать 
+и запоминать еще один пароль и потому что это быстро и удобно!</div>
+
+    <div style="clear:both"></div>
+
+
+      <img class="preload" src="/images/follow/cover3.jpg">
+
+
+      
+
+
+  </div>
+
+
+  <div class="footer">
+        
+    <div class="social">
+      <A TARGET="_BLANK" HREF="https://www.facebook.com/followmytravel">
+        <div class="small-circle">
+          <span class="fa fa-facebook"></span>
+        </div>
+      </A>
+      <a target="_blank" href="http://instagram.com/fmytravel">
+        <div class="small-circle">
+          <span class="fa fa-instagram"></span>
+        </div>
+      </a>
+      <div style="clear:both"></div>
+    </div>
+
+    <div class="copy">
+      &copy; 2014 Follow My Travel
+    </div>
+
+    <div style="clear:both"></div>
+  </div>
+
+</div>
+
+
+
+
+<script>
+  $(document).ready(function() {  
+
+    $('.preload').load(function() {  
+        $(".background_photo").css("opacity",1);
+   });  
+    setTimeout('$(".background_photo").css("opacity",1)',5000);
+  });
+
+
+
+
+    $(".learn").click(function() {
+      scrollToClass("slide1")
+    });
+
+
+
+function scrollToId(id){
+  $('html,body').animate({scrollTop: $("#"+id).offset().top - 10},500);
+}
+
+function scrollToClass(className){
+  $('html,body').animate({scrollTop: $("."+className).offset().top - 10},500);
+}
+
+
+
+</script>

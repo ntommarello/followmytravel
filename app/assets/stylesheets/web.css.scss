@@ -1,0 +1,893 @@
+// Place all the styles related to the web controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+  @font-face{
+    font-family: 'fakt_slab_light';
+    src: url('/fonts/faktslabprolightwebfont.eot');
+    src: url('/fonts/faktslabprolightwebfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/faktslabprolightwebfont.woff') format('woff'),
+         url('/fonts/faktslabprolightwebfont.ttf') format('truetype'),
+         url('/fonts/faktslabprolightwebfont.svg#fakt_slab_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'fakt_slab_medium';
+    src: url('/fonts/faktslabpromedium.eot');
+    src: url('/fonts/faktslabpromedium.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/faktslabpromedium.woff') format('woff'),
+      url('/fonts/faktslabpromedium.ttf') format('truetype'),
+      url('/fonts/faktslabpromedium.svg#faktslabpromedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  html, body {
+  margin:0px;
+  padding:0px;
+  height:100%;
+  min-height:350px;
+  text-rendering:optimizelegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family:"fakt_slab_light","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:22px;
+  line-height:1.5;
+  color:#424242;
+}
+
+
+
+.followmytravel {
+
+
+  font-family:"Helvetica Neue",Helvetica,arial;
+
+
+   h2,h3 {
+    font-weight:300;
+    margin-top:0px;
+    color:#636E84;
+   }
+
+
+
+
+  header {
+    background:#000;
+    width:100%; 
+    height:100%;
+
+    .topNav {
+      position:absolute;
+      z-index:100;
+      width:100%;
+      height:30px;
+      .logo {
+        width:210px;
+        height:30px;
+        background:url(/assets/cover_logo.png);
+        background-size: 210px 30px;
+        margin-top:10px;
+        margin-left:10px;
+        float:left;
+      }
+      .links {
+        float:right; text-align:right;  height:30px;
+      }
+
+      a {
+        color:white;
+        font-size:14px;
+        text-decoration:none;
+        line-height:50px;
+        margin-right:10px;
+
+        &:hover {
+          color:rgba(255,255,255,.8);
+        }
+      }
+    }
+
+
+    .content {
+      position:absolute;
+      text-align:center;
+      width:100%;
+      color:white;
+      height:100%;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:20%;
+
+      h1,h2 {
+        color:white;
+      }
+
+
+      h1 {
+        margin-top:0px;
+        margin-bottom:0px;
+        font-size:60px;
+        font-weight:bold;
+        line-height:1em;
+      } 
+
+      h2 {
+        margin-top:20px;
+        margin-bottom:20px;
+        font-size:32px;
+        line-height:40px;
+        font-weight:300;
+        max-width:600px;
+        margin-left:auto;
+        margin-right:auto;
+        line-height:1em;
+      }
+    }
+
+    .bottom {
+      font-size:14px;
+      font-weight:500;
+      position:absolute;
+      padding-bottom:10px;
+      bottom:0px;
+      text-align:center;
+      width:100%;
+      color:rgba(255,255,255,.8);
+      font-variant:small-caps;
+     
+      .facebook-login {
+        margin-bottom:60px;
+      }
+
+      h1 {
+        margin-top:0px;
+        margin-bottom:30px;
+        font-size:50px;
+        margin-left:auto;
+        margin-right:auto;
+        max-width:1000px;
+        font-weight:bold;
+        line-height:1em;
+        color:rgba(255,255,255,1);
+      } 
+      .fa-chevron-circle-down {
+        font-size:40px;
+         cursor:pointer;
+         color:rgba(255,255,255,1);
+
+        &:hover {
+          color:rgba(255,255,255,.8);
+        }
+      }
+
+    }
+
+    .background_photo {
+      position:absolute;
+      opacity:0;
+      background:radial-gradient(ellipse closest-side,
+      rgba(0,0,0,0), rgba(0,0,0,0.2)), url(/assets/main_background.jpg) no-repeat center center;
+      background-size:cover;
+      min-height: 100%;
+      width:100%; 
+      -webkit-transition: opacity 500ms ease-in-out;
+      -moz-transition: opacity 500ms ease-in-out;
+      -o-transition: opacity 500ms ease-in-out;
+      transition: opacity 500ms ease-in-out;
+    }
+
+
+  }
+
+
+  .section {
+    padding-top:100px;
+    padding-bottom:100px;
+    padding-right:10px;
+    padding-left:10px;
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    min-width:300px;
+
+
+    h2,h3 {
+      font-size:40px;
+      text-align:center;
+      max-width:600px;
+      margin-left:auto;
+      margin-right:auto;
+      line-height:1.1em;
+      margin-bottom:0px;
+    }
+
+
+    .centerCircles {
+      max-width:726px;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:40px;
+    }
+
+    .col {
+      float:left;
+      width:33%;
+
+      h3 {
+        margin-top:40px;
+        color:#3B4965;
+        font-size:30px;
+
+
+
+
+      }
+    }
+
+    .circle {
+      height:140px;
+      width:140px;
+      border: 1px solid #50EECF;
+      border-radius:50%;
+      margin-left:auto;
+      margin-right:auto;
+
+      .fa {
+        color:#50EECF;
+        text-align:center;
+        width:100%;
+        line-height:140px;
+        font-size:50px;
+        font-weight:100;
+      }
+      .fa-home {
+        font-size:66px;
+      }
+    }
+
+    .divider {
+      max-width:100%;
+
+      margin-left:auto;
+      margin-right:auto;
+      height:1px;
+      background:#636E84;
+      margin-top:40px;
+      margin-bottom:40px;
+    }
+
+    .more_info {
+      max-width:780px;
+      margin-left:auto;
+      margin-right:auto;
+      font-size:16px;
+
+      h3 {
+        color:#50EECF;
+        font-size:30px;
+      }
+
+      .left_col {
+        h3 {
+          text-align:right;
+        }
+        width:46%;
+        float:left;
+        text-align:right;
+        padding-right:4%;
+        border-right:1px solid #636E84;
+
+      }
+      .right_col {
+        h3 {
+          text-align:left;
+        }
+        width:46%;
+        float:right;
+        text-align:left;
+      }
+
+    }
+  }
+
+
+
+  .red {
+    background:#EA4249;
+  }
+
+  .red_section {
+    
+    padding-bottom:20px;
+    text-align:center;
+    h1, h2, h3 {
+      color:white;
+    }
+
+    .col h3 {
+      color:white;
+    }
+
+    .circle {
+      border:1px solid #fff;
+
+      .fa {
+        color:white;
+      }
+    }
+
+    .divider {
+      background:white;
+    }
+
+    .fb-text {
+      color:#3B4965;
+      font-size:14px;
+      margin-left:auto;
+      margin-right:auto;
+      max-width:600px;
+      text-align:center;
+    }
+
+   
+
+  }
+
+
+ .footer {
+      margin-top:80px;
+      color:white;
+      font-size:14px;
+      padding-bottom:40px;
+
+      a {
+        color:white;
+      }
+
+      .social {
+        float:left;
+         margin-left:40px;
+
+
+        .small-circle {
+          width:30px;
+          height:30px;
+          border-radius:50%;
+          border:1px solid #fff;
+          text-align:center;
+          float:left;
+          margin-right:10px;
+          cursor:pointer;
+
+          &:hover {
+            background:rgba(0,0,0,.1);
+          }
+
+          .fa {
+            font-size:18px;
+            line-height:30px;
+            text-align:center;
+          }
+        }
+      }
+      .copy {
+        float:right;
+        line-height:30px;
+         margin-right:40px;
+
+        
+      }
+    }
+
+
+  .preload {
+    opacity:0;
+    height:1px;
+    width:1px;
+    position:absolute;
+  }
+
+
+}
+
+
+
+
+
+
+.facebook-login {
+
+    position: relative;
+
+    display: inline-block;
+    background-color: #576fbe;
+
+    background:#576fbe;
+    border-radius: 3px;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding: 6px 0;
+    padding-left: 75px;
+    margin: 0px 0 16px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+    overflow:hidden;
+    width: 230px;
+    border-radius:3px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
+
+    span.logo{
+      font-size:24px;
+      //background: #5167B0;
+      background:#5167B0; 
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 55px;
+      line-height: 65px;
+      border-radius:3px;
+      text-align: center;
+    }
+
+    img {
+      position: relative;
+      top: 5px;
+      left: -2px;
+      width: 18px;
+      vertical-align: middle;
+      height: 16.5px;
+    }
+
+    &:hover {
+      background-color: #657ED1;
+      color: white;
+      text-decoration: none;
+      background:#657ED1;
+      span.logo{
+        background-color:#556cb9;
+        background:#556cb9;
+      }
+    }
+    &:active {
+      background:#425596;
+      box-shadow: 0 0 2px 2px #3B4C86 inset;
+      span.logo{
+       background:transparent;
+      }
+
+    }
+  }
+
+
+ @media screen and (max-width: 675px) {
+  .followmytravel {
+    .section {
+      .col {
+        h3 {
+           font-size:22px;
+        }
+      }
+    }   
+  }
+}
+
+
+
+
+ @media screen and (max-width: 480px) {
+  .followmytravel {
+
+    header {
+
+      .topNav {
+        .logo {
+          width:160px;
+          height:23px;
+          background-size:160px 23px;
+        }
+
+        a {
+          line-height:44px;
+        }
+      }
+      .bottom {
+        padding-bottom:5px;
+        .facebook-login {
+          margin-bottom:10px;
+        }
+        .fa-chevron-circle-down {
+        font-size:30px;
+
+        }
+
+        h1,h2 {
+          font-size:36px;
+          margin-bottom:20px;
+        }
+      }
+    }
+
+    .section {
+
+      h2 {
+        font-size:32px;
+      }
+
+      padding-top:50px;
+      padding-bottom:50px;
+      .col {
+        h3 {
+           margin-top:20px;
+           font-size:16px;
+        }
+      }
+      .circle {
+        height:90px;
+        width:90px;
+        .fa {
+          line-height:90px;
+          margin-left:2px;
+        }
+      }
+      .more_info {
+        font-size:14px;
+        h3 {
+          font-size:18px;
+        }
+      }
+    }   
+  }
+  .red {
+    .footer {
+      margin-top:20px;
+      padding-bottom:15px;
+
+      .social {
+        margin-left:15px;
+      } 
+      .sopt {
+        margin-right:15px;
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 360px) {
+
+  .facebook-login {
+    width:210px;
+    padding-left: 65px;
+  }
+
+
+  .followmytravel {
+
+    header {
+      .bottom {
+        h1,h2 {
+          font-size:22px;
+        }
+      }
+    }
+
+  }
+
+}
+
+@media screen and (max-height: 350px) {
+
+  .facebook-login {
+    width:210px;
+    padding-left: 65px;
+  }
+
+
+  .followmytravel {
+
+    header {
+
+      .topNav {
+        .logo {
+          width:160px;
+          height:23px;
+          background-size:160px 23px;
+        }
+
+        a {
+          line-height:44px;
+        }
+      }
+      .bottom {
+        padding-bottom:5px;
+        .facebook-login {
+          margin-bottom:10px;
+        }
+        .fa-chevron-circle-down {
+        font-size:30px;
+
+        }
+
+        h1,h2 {
+          font-size:22px;
+          margin-bottom:20px;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.welcome {
+
+  area {
+      outline : none !important;
+  }
+  *:focus {outline: none;}
+
+
+    button {
+      border-radius:3px;
+      color:white;
+      padding:20px;
+      width:200px;
+      cursor:pointer;
+      border:none;
+      text-align:center;
+      font-size:18px;
+      margin-left:5px;
+      margin-right:5px;
+      -webkit-transition: background 100ms ease-in-out;
+      -moz-transition: background 100ms ease-in-out;
+      -o-transition: background 100ms ease-in-out;
+      transition: background 100ms ease-in-out;
+    }
+
+
+  font-family:"Helvetica Neue",Helvetica,arial;
+
+  h1,h2 {
+    font-weight:300;
+  }
+    .red-highlight {
+      color:#EA4249;
+    }
+  .top_navigation {
+    height:80px;
+    background:#F4F4F4;
+    min-width:320px;
+   
+
+    .logo {
+      cursor:pointer;
+      float:left;
+      margin-left:20px;
+      margin-top:20px;
+      width:338px;
+      height:38px;
+      background:url(/assets/cover_logo.png);
+      background-size: 338px 38px;
+    }
+
+    .user {
+      float:right;
+      margin-right:20px;
+      font-size:13px;
+      color:#424242;
+      cursor:pointer;
+
+      .name {
+        float:left;
+        line-height:80px;
+        margin-right:5px;
+      }
+
+      .avatar {
+        float:left;
+        margin-top:20px;
+        height:38px;
+        width:38px;
+      }
+    }
+  }
+
+
+  .flash-bar {
+    background:#3B4965;
+    padding:50px;
+    line-height:1.8em;
+
+    h1,h2 {
+      color:white;
+      text-align:center;
+    }
+
+    h1 {
+      margin:0px;
+      font-size:60px;
+    }
+
+    h2 {
+      margin:0px;
+      margin-top:20px;
+      font-size:38px;
+      color:rgba(255,255,255,.7);
+    }
+
+
+  }
+
+  .flexContent {
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:40px;
+    padding-right:40px;
+  }
+
+  .form-box {
+    margin-top:40px;
+    width:90%;
+    background:#f4f4f4;
+    padding:5%;
+    text-align:center;
+
+    h2 {
+      margin-top:0px;
+      margin-bottom:20px;
+      line-height:1.1;
+      font-size:30px;
+    }
+
+    input {
+      font-size:18px;
+      border:1px solid #ccc;
+      background:white;
+      padding:10px;
+      width:180px;
+      margin-bottom:6px;
+    }
+    .autocomplete-name {
+      width:75%;
+    }
+    .cities {
+      margin-bottom:40px;
+    }
+    .submit {
+      margin-top:20px;
+      border:1px solid #EA4249;
+      color:#EA4249;
+      background:transparent;
+
+      &:hover {
+        background:#EA4249;
+        color:White;
+      }
+    }
+  }
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 667px) {
+
+  .follow-welcome {
+
+    .top_navigation {
+       height:52px;
+
+      .logo {
+        margin-left:10px;
+        margin-top:10px;
+        width:210px;
+        height:30px;
+        background-size: 210px 30px;
+      }
+
+      .user {
+        margin-right:10px;
+
+        .name {
+          line-height:52px;
+          display:none;
+        }
+        .avatar {
+          margin-top:10px;
+          height:30px;
+          width:30px;
+        }
+
+      }
+    }
+
+    .flash-bar {
+      padding:30px;
+
+      h1 {
+        font-size:36px;
+      }
+      h2 {
+        font-size:18px;
+        margin-top:5px;
+        line-height:1.2;
+      }
+
+    }
+
+    .flexContent {
+      padding-left:0px;
+      padding-right:0px;
+    }
+
+    .form-box {
+      background:white;
+      width:100%;
+      padding:0%;
+      padding-bottom:20px;
+
+
+      h2 {
+        font-size:20px;
+        margin-top:10px;
+        margin-bottom:10px;
+      }
+      input, .autocomplete-name {
+        width:240px;
+      }
+    }
+
+  }
+
+}
+
